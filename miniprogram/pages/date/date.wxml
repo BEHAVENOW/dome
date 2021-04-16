@@ -1,0 +1,42 @@
+<view class="wrap">
+    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>
+<view class="tab">
+  <view class="li" bindtap="line">折线图</view>
+  <!-- 小程序没有下拉框   需要自己编辑 -->
+  <view class="search-bar">
+        <view class="condition" bindtap="showCondition">
+            <view class="select-condition">{{choosedCondition.title}}</view>
+            <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+            <cover-view class="option-list" style="height: {{conditionVisible ? '500rpx': '0'}}">
+                <cover-view bindtap="onChnageCondition" data-id="{{index}}" class="list-item" wx:for="{{title}}" wx:key="index" wx:for-index="index" >
+                    <cover-view class="title">{{title[index]}}</cover-view>
+                    <cover-view class="title" wx:if="{{select[index]}}">
+                    </cover-view>
+                    <cover-view class="title" wx:else>
+                        <cover-image src="../../images/right.png" style="width: 30rpx; height: 30rpx;"></cover-image>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+        </view>
+    </view>
+  <view class="li" bindtap="bar">柱状图</view>
+    <!-- <view class="search-bar">
+        <view class="condition" bindtap="showCondition">
+            <view class="select-condition">{{choosedCondition.title}}</view>
+            <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+            <cover-view class="option-list" style="height: {{conditionVisible ? '300rpx': '0'}}">
+                <cover-view bindtap="onChnageCondition" data-id="{{item.id}}" class="list-item" wx:for="{{conditionList}}" wx:key="index" wx:for-index="index">
+                    <cover-view class="title">{{item.title}}</cover-view>
+                    <cover-view class="title" wx:if="{{item.select}}">√</cover-view>
+                </cover-view>
+            </cover-view>
+        </view>
+    </view> -->
+</view>
+<view class="aaa">
+    <view class="aa"></view>
+    <view class="a">
+        
+    </view>
+</view>

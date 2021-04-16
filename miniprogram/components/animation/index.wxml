@@ -1,0 +1,8 @@
+<!--pyp/animation/animation1/index.wxml-->
+<view class="bg_view" >
+  <image class="bgimage" src="https://img.tukuppt.com/bg_grid/00/03/49/EOaDQvGz44.jpg!/fh/350"></image>
+</view>
+<view  wx:for="{{numArr}}"  wx:key="unique">
+  <view  class="border_view" style="width:{{borderArr['border' + index]}}rpx;height:{{borderArr['border' + index]}}rpx;border-radius:150rpx;background: radial-gradient(#1E1F2A, #1E1F2A, #1E1F2A);opacity:0.3969;position: absolute;  position: absolute;top: {{topArr['top' + item]}}rpx;left: {{leftArr['left' + item]}}rpx; " animation="{{animationArr['animationData' + item]}}"  ></view>
+</view>
+

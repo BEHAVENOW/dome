@@ -1,0 +1,35 @@
+<view class="bigV">
+  <view class="dayV">
+    <text>{{day}}</text>
+  </view>
+  <view class="hourV">
+    <text>{{hour}}</text>
+  </view>
+  <view class="minuteV">
+    <text>{{minute}}</text>
+  </view>
+  <view class="secondV">
+    <text>{{second}}</text>
+  </view>
+  <view class="msV">
+    <text>{{ms}}</text>
+  </view>
+</view>
+<view class="bigV">
+  <view class="dayV">
+    <text>{{day}}</text>
+  </view>
+  <view class="hourV">
+    <text>{{hour}}</text>
+  </view>
+  <view class="minuteV">
+    <text>{{minute}}</text>
+  </view>
+  <view class="secondV">
+    <text>{{second}}</text>
+  </view>
+  <view class="msV">
+    <text>{{ms}}</text>
+  </view>
+</view>
+<!-- <view class="sj"></view> -->

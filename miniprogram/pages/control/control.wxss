@@ -1,0 +1,309 @@
+.body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(241, 242, 247);
+}
+
+.head {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+}
+
+.data {
+  flex: 1;
+  margin-bottom: 5%;
+  margin-left: 2.5%;
+}
+
+.dataData {
+  height: 40%;
+}
+
+.wrap {
+  flex: 1;
+  width: 100%;
+  height: 25vh;
+}
+
+/* 滑动块部分 */
+.tab {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  padding: 10rpx 0;
+}
+ 
+.topTabSwiper {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  zoom: 1;
+  margin-top: 5%;
+}
+ 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ 
+.tabBorer {
+  border-bottom: 1px solid rgb(77, 172, 209);
+  color: rgb(77, 172, 209);
+}
+ 
+.swiper {
+  width: 100%;
+  height: 600rpx;
+}
+ 
+.swiper_con {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20rpx 0;
+}
+
+/* 用电量css */
+.content{
+  height: 100%;
+  width: 100%;
+  padding: 30rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+.scroll{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.scroll-view{
+  display: flex;
+  box-sizing: border-box;
+}
+.scroll-view-item{
+  padding: 0rpx 20rpx;
+  border-radius: 20rpx;
+  color: #A7A9A9;
+  white-space: nowrap;
+  margin-right: 10rpx;
+}
+.active{
+  background: #44BBEE;
+  color: #fff;
+}
+.mychart{
+  width: 100%;
+  height: 400rpx;
+  box-sizing: border-box;
+}
+#mychart-dom-bar{
+  font-size: 14px;
+}
+/* 用电量css */
+
+/* 表格开始 */
+.table {
+  margin-top: 50rpx;
+  border: 0px solid rgb(0, 0, 0);
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+  flex: 1;
+  justify-content: center;
+  background-color: rgb(241, 242, 247);
+  font-size: 20rpx;
+  color: rgb(0, 0, 0);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background-color: rgb(241, 242, 247);
+}
+.th {
+  flex: 1;
+  justify-content: center;
+  background-color: rgb(241, 242, 247);
+  font-size: 20rpx;
+  color: rgb(0, 0, 0);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  border-bottom: 0;
+}
+/* 表格结束 */
+
+
+
+
+
+
+
+
+/* .body {
+  width: 100%;
+  height: 100vh;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+}
+
+.list {
+  display: flex;
+  line-height: 10rpx;
+}
+
+.list text {
+  width: 50%;
+  margin-left: 18px;
+  margin-top: 20px;
+}
+
+.choice {
+  position: relative;
+  margin-left: 18px;
+  margin-top: 20px;
+}
+
+.choice switch {
+  margin-right: 10px;
+}
+
+.control{
+  display: flex;
+  margin-top: 20px;
+}
+
+.open {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  margin: 0 120rpx;
+  background: #ff0000;
+  border-radius: 90%;
+}
+
+.text {
+  color: #424446;
+  font-size: 30px;
+  margin: auto;
+}
+
+.close {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  background: #ff0000;
+  border-radius: 90%;
+} */
+
+
+
+/* 表格开始 */
+/* .table {
+  border: 0px solid rgb(255, 255, 255);
+  margin-top: 20px;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+  flex: 1;
+  justify-content: center;
+  background: #ffffff;
+  font-size: 20rpx;
+  color: rgb(0, 0, 0);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  flex: 1;
+  justify-content: center;
+  background: #f3f3f3;
+  font-size: 20rpx;
+  color: rgb(0, 0, 0);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  border-bottom: 0;
+} */
+
+/* .th-th1 {
+  border-left: 0;
+} */
+/* 表格结束 */
+
+/* 设置图片 */
+/* .spot {
+  position: absolute;
+  margin-left: 90%;
+  width: 46rpx;
+  height: 30rpx;
+  display: flex;
+}
+
+.spot2 {
+  margin: auto;
+  width: 5rpx;      
+  height: 5rpx;      
+  border: 1px solid rgb(255, 255, 255);     
+  border-radius: 100px;      
+  background-color: rgb(255, 255, 255);
+} */
+/* 设置图片结束 */
+
+/* 出现 */
+/* .appear { */
+  /* display: flex; 
+  width: 100%; 
+  height: 100vh; 
+  background: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=381205888,1176521966&fm=26&gp=0.jpg'); 
+  background-size: cover;   
+  z-index: 1000; */
+  /* background-color: rgb(2, 17, 62); */
+/* } */
+/* .disappear {
+  width: 0;
+  height: 0;
+} */
+/* 消失 */

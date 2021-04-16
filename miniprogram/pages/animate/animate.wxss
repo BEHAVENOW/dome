@@ -1,0 +1,4 @@
+/* pages/animate/animate.wxss */
+.init {
+  margin-top: 200px;
+}

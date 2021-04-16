@@ -1,0 +1,8 @@
+<view catchtap="imageUpload" style="border: 1px solid red;width: 300rpx;height: 300rpx;">
+  <view>
+    <image class="pppImage" src="{{imgURL}}" id="{{uuid[index]}}"></image>
+  </view>
+  <!-- <view wx:else> src="../../images/{{equiment[index]}}.png" wx:if="{{uuid[index] !== imageUuidChange}}"
+    <image class="pppImage" src="cloud://weiduan-9gtmiw7oa0914f23.7765-weiduan-9gtmiw7oa0914f23-1304768469/{{uuid[index]}}.png"></image>
+  </view> -->
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用电告警",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

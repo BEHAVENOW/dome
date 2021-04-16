@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "实时监测",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

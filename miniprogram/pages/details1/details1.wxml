@@ -1,0 +1,45 @@
+<view class="body">
+  <!-- <view class="navigate">
+    <text style="font-weight: bold;font-size: 40rpx;color: #fff;">近期用电量：</text>
+  </view>
+  <view class="wrap">
+    <ec-canvas id="mychart-line1" canvas-id="mychart-line1" ec="{{ ac }}" force-use-old-canvas="true"></ec-canvas>
+  </view> -->
+  <view>
+    <view style="margin-top: 20rpx;">
+      <text style="font-weight: bold;font-size: 40rpx;color: #fff;">历史用电量查询：</text>
+    </view>
+    <view class="choice">
+      <!-- <view class="leftTime">
+        <text>起始时间: \n</text> 
+        <text>{{leftTime}}</text>
+      </view>
+      <view class="dateStart">
+        <picker class="picker" mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          <text>点击选择终止时间: </text> 
+          <view class="dateChange">
+            {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}}
+          </view>
+        </picker>
+      </view> -->
+      <view class="btnChioce">
+        <button style="border-bottom: {{btn1}} solid pink;" bindtap="seven">近三天</button>
+        <button style="border-bottom: {{btn2}} solid pink;" bindtap="mouth">近一个月</button>
+        <button style="border-bottom: {{btn3}} solid pink;" bindtap="year">近一年</button>
+      </view>
+      <!-- <view class="dateEnd">
+        <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+          <text>终止时间:</text>
+          <view class="dateChange">
+            {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} 
+          </view>
+        </picker>
+      </view> -->
+    </view>
+  </view>
+  <view style="margin-top: 60rpx;">
+    <view class="wrap">
+      <ec-canvas id="mychart-line1" canvas-id="mychart-line1" ec="{{ ac }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+  </view>
+</view> 

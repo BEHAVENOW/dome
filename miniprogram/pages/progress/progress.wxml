@@ -1,0 +1,20 @@
+<progress class="progress" percent="{{percent}}" show-info="{{isSi}}" stroke-width="{{sw}}" activeColor="{{pc}}" backgroundColor="{{pbc}}" active="{{isActive}}" active-mode="forwards">
+</progress>
+ 
+<view class="section">
+  <input placeholder="设置进度" type="number" bindinput="progressInput" confirm-type="done" focus/>
+</view>
+<view class="section">
+  <input placeholder="设置宽度" type="number" bindinput="swInput" confirm-type="done" focus/>
+</view>
+<view>
+  <view class='text'>设置进度条颜色(请使用十六进制颜色值,例如：#ff00ff)</view>
+  <input class="section" placeholder="" value="#" bindinput="pcInput" confirm-type="done" focus/>
+</view>
+<view>
+  <view class='text'>未选择的进度条的颜色(请使用十六进制颜色值,例如：#ff00ff)</view>
+  <input class="section" placeholder="" value="#" bindinput="pbcInput" confirm-type="done" focus/>
+</view>
+ 
+<button class='btn' bindtap="bindButton">设置/取消进度条从左往右的动画</button>
+<button class='btn' bindtap="bindButton1">设置/取消进度条右侧显示百分比</button>

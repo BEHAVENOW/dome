@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用电计量",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

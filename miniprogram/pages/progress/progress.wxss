@@ -1,0 +1,22 @@
+.progress {
+  width: 95%;
+  margin: 20rpx;
+}
+ 
+.section {
+  width: 93%;
+  margin: 20rpx;
+  background-color: #ccc;
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+ 
+.btn {
+  width: 95%;
+  margin-top: 10rpx;
+}
+ 
+.text {
+  width: 100%;
+  font-size: 30rpx;
+}

@@ -1,0 +1,54 @@
+<view class="body">
+  <view class="image">
+    <view class="imageText">
+      <text class="userinfo-nickname">{{userId}}\n</text>
+      <!-- <text style="font-size: 25rpx;">查看编辑个人资料</text> -->
+    </view>
+    <!-- <view class="uploadImage" bindtap="getImage"> -->
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button> -->
+      <!-- <image src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+      <!-- <image bindtap="bindViewTap" src="{{imageUrl}}" mode="cover"></image>
+    </view> -->
+    <view class="uploadImage" catchtap="imageUpload">
+      <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/6073BC000004.png?sign=f3e86c9f4a8cec840ea57ccb68f6b4ed&t=1616738284"></image>
+    </view>
+  </view>
+  <view class="listZJ" bindtap="list1">
+      <!-- <image class="c" src="../../images/my.png"></image> -->
+      <text class="b">设备管理</text>
+      <image class="a" src="../../images/arrow.png"></image>
+    </view>
+  <view class="listView">
+    <view class="list" bindtap="binding">
+      <!-- <image class="c" src="../../images/my.png"></image> -->
+      <text class="b">设备绑定</text>
+      <image class="a" src="../../images/arrow.png"></image>
+    </view>
+    <view class="list" bindtap="share">
+      <!-- <image class="c" src="../../images/my.png"></image> -->
+      <text class="b">设备分享</text>
+      <image class="a" src="../../images/arrow.png"></image>
+    </view>
+    <!-- <view class="list"> -->
+      <!-- <image class="c" src="../../images/my.png"></image> -->
+      <!-- <text class="b">帮助中心</text>
+      <image class="a" src="../../images/arrow.png"></image>
+    </view> -->
+    <view class="list" catchtap="contect">
+      <!-- <image class="c" src="../../images/my.png"></image> -->
+      <text class="b">联系我们</text>
+      <image class="a" src="../../images/arrow.png"></image>
+    </view>
+  </view>
+  <!-- <view class="list" catchtap="time">
+    <text class="b">关于</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view> -->
+  <view class="list" style="border-bottom: 0px solid #fff;margin: 30rpx auto;" bindtap="out">
+    <button style="font-size: 30rpx;color: red;margin: auto;">退出登录</button>  
+    <!-- <image class="c" src="../../images/my.png"></image>
+    <text class="b">退出登录</text>
+    <image class="a" src="../../images/arrow.png"></image> -->
+  </view>
+</view>
+

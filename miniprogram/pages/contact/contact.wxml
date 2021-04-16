@@ -1,0 +1,19 @@
+<view class="body">
+  <view class="content">
+    <view class="phone" style="margin-top: 100rpx;">
+      <image class="image" src="../../images/phone.png"></image>
+      <text class="text1">固定电话\n</text>
+      <text class="text">18652989188</text>
+    </view>
+    <view class="phone">
+      <image class="image" src="../../images/email.png"></image>
+      <text class="text1">企业邮箱\n</text>
+      <text class="text">hualongruanthinkdremn. com</text>
+    </view>
+    <view class="phone">
+      <image class="image" src="../../images/address.png"></image>
+      <text class="text1">地址\n</text>
+      <text class="text">南京市江宁区科建路29号有志大厦新大楼603</text>
+    </view>
+  </view>
+</view>

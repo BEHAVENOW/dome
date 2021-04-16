@@ -1,0 +1,3 @@
+<view class="chartBg">
+	<ec-canvas id="mychart1" canvas-id="mychart1" ec="{{ ec1 }}"></ec-canvas>
+</view>

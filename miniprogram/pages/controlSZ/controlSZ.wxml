@@ -1,0 +1,77 @@
+<view class="body">
+  <view class="listZJ" >
+    <text class="b">设备名称</text>
+    <text class="t1">{{nameId}}</text>
+    <button class="btnChange" catchtap="list1">修改名称</button>
+    <image class="aa" src="../../images/arrow.png"></image>
+    <modal hidden="{{hiddenmodalput}}" title="请输入需要修改的设备名称" 
+      confirm-text="提交" cancel-text="取消" bindcancel="cancel" 
+      bindconfirm="confirm">
+    <!-- 这里可以自由选择你的输入框类型<input type='text' placeholder="请输入内容" auto-focus/> -->
+    <!-- <textarea placeholder="请输入内容" bindinput="getinput"></textarea> -->
+    <input type='text' placeholder="请输入内容" bindinput="getinput" auto-focus/>
+    </modal>
+    <!-- 下拉框加上自定义
+      <view class="{{custom}}">
+      <button class="customBtn" catchtap="list1">自定义</button>
+      <modal hidden="{{hiddenmodalput}}" title="请输入需要修改的设备名称" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+        <input type='text' placeholder="请输入内容" bindinput="getinput" auto-focus/>
+      </modal>
+    </view> 
+    <view class="search-bar">
+      <view class="condition" bindtap="showCondition">
+          <view class="select-condition">{{nameId}}</view>
+          <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+          <cover-view class="option-list" style="height: {{conditionVisible ? (conditionList.length>5?300:conditionList.length*60):0}}">
+              <cover-view bindtap="onChnageCondition" id="{{conditionList[index]}}" class="list-item" wx:for="{{conditionList}}" wx:key="index" >
+                  <cover-view class="title">{{conditionList[index]}}</cover-view>
+              </cover-view>
+          </cover-view>
+      </view>
+    </view>-->
+  </view>
+  
+  <view class="listView">
+    <view class="list">
+      <text class="b">设备ID</text>
+      <text class="t">{{id}}</text>
+    </view>
+    <!-- <view class="list">
+      <text class="b">IP地址</text>
+      <text class="t">{{ip}}</text>
+    </view> -->
+    <view class="list">
+      <text class="b">绑定时间</text>
+      <text class="t">{{time}}</text>
+    </view>
+  </view>
+  <view class="list" bindtap="share">
+    <text class="b">设备共享</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view>
+  <!-- <view class="list">
+    <text class="b">消息记录</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view>
+  <view class="list">
+    <text class="b">固件升级</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view> -->
+  <!-- <view class="list" style="border-bottom: 0.3rpx solid rgb(223, 220, 220);" bindtap="out">
+    <text class="b">意见反馈</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view>
+  <view class="list" style="border-bottom: 0.3rpx solid rgb(223, 220, 220);" bindtap="out">
+    <text class="b">参数设置</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view>
+  <view class="list" style="border-bottom: 0px solid #fff;" bindtap="out">
+    <text class="b">远程升级</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view> -->
+  <view class="list" style="border-bottom: 0px solid #fff;margin: 30rpx auto;" bindtap="delete">
+    <text class="b" style="font-size: 30rpx;color: red;margin: auto;">删除设备（解绑）</text>
+    <!-- <image class="a" src="../../images/arrow.png"></image> -->
+  </view>
+</view>
+

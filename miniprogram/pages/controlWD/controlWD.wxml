@@ -1,0 +1,157 @@
+<view style="background-color: #303030;height: {{uuid.length + nane.length>6 ? '' : 100}}vh;">
+  <!-- height: {{uuid.length>5 ? 240 : 200}}vh; (uuid.length + nane.length)*14.5-->
+    <!-- <text style="font-weight: bold;font-size: 40rpx;color: #fff;">在线设备：</text> -->
+  <view class="content">
+    <view class="p" id="{{[index]}}" bindtap="view" wx:for="{{uuid}}" wx:key="key">
+      <view class="pp" wx:if="{{status[index] === '在线'}}">
+         <!-- animation="{{slide_up[index]}}" -->
+        <view class="ppp">
+           <!-- catchtap="imageUpload" -->
+          <view>
+            <image class="pppImage" src="../../images/mcbO.png" id="{{uuid[index]}}"></image>
+          </view>
+            <!-- <view wx:else> wx:if="{{uuid[index] !== imageUuidChange}}"
+              <image class="pppImage" src="cloud://weiduan-9gtmiw7oa0914f23.7765-weiduan-9gtmiw7oa0914f23-1304768469/{{uuid[index]}}.png'"></image>
+            </view> -->
+          <!-- <text class="text1">{{uuid[index]}}\n</text> -->
+          <!-- <text wx:if="{{locking[index] === 1}}">（{{state1}}）\n</text>          
+          <text wx:else>（{{state2}}）\n</text> -->
+          <text class="text1">{{equimentName[index]}}\n</text>
+          <text>当月用电量：{{whValue[index]}}W\n</text>
+          <text>实时电流：{{phA[index]}}A\n</text>
+          <text>实时电压：{{phV[index]}}V\n</text>
+        </view>
+        <!-- data-id="[{{locking[index],uuid[index]}}]" -->
+        <view class="imageView">
+          <view class="imageStatus"> 
+            <!-- catchtap="gateStatus" -->
+            <view class="image" wx:if="{{statusC[index] === 1 && statusO[index] === 0 }}">
+              <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/colsing.png?sign=9eace0ff89d8411a7ddc0097711dfd71&t=1616484935"></image>
+              <view class="text"><text>{{status[index]}}</text></view>
+            </view>
+            <view class="image" wx:else>
+              <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/opening.png?sign=ac0246ae59179819a1fc2d18602f0eb0&t=1616484919"></image>
+              <view class="text"><text>{{status[index]}}</text></view>
+            </view>
+          </view> 
+          <!-- catchtap="locking" -->
+          <view class="imageV" id="{{[index]}}">
+            <view class="image" wx:if="{{locking[index] === 1}}">
+              <image src="../../images/locking.png"></image>
+              <!-- <view class="text"><text>{{state1}}</text></view> -->
+            </view>
+            <view class="image" wx:else>
+              <image src="../../images/unlock.png"></image>
+              <!-- <view class="text"><text>{{state2}}</text></view> -->
+            </view>
+          </view>
+          <!-- <view class="imageV">
+            <view class="image"><image src="../../images/safety.png"></image></view>
+            <view class="text"><text>{{protect}}</text></view>
+          </view> -->
+        </view>
+      </view>
+      <view class="pp" wx:else>
+          <!-- animation="{{slide_up[index]}}" -->
+          <view class="ppp">
+            <!-- catchtap="imageUpload" -->
+            <view>
+              <!-- <image class="pppImage" src="cloud://weiduan-9gtmiw7oa0914f23.7765-weiduan-9gtmiw7oa0914f23-1304768469/{{equiment[index]}}.png"></image> -->
+            </view>
+            <view> 
+              <!-- wx:else wx:if="{{uuid[index] !== imageUuidChange}}" -->
+              <image class="pppImage" src="../../images/mcb.png"></image>
+            </view>
+            <!-- <text class="text1">{{uuid[index]}}\n</text> -->
+            <!-- <text wx:if="{{locking[index] === 1}}">（{{state1}}）\n</text>          
+            <text wx:else>（{{state2}}）\n</text> -->
+            <text class="text1">{{uuid[index]}}\n</text>
+            <text>当月使用电量：{{}}W\n</text>
+            <text>实时电流：{{}}A\n</text>
+            <text>实时电压：{{}}V\n</text>
+          </view>
+          <!-- data-id="[{{locking[index],uuid[index]}}]" -->
+          <view class="imageView">
+            <view class="imageStatus">
+              <view class="image">
+                <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/colsing.png?sign=9eace0ff89d8411a7ddc0097711dfd71&t=1616484935"></image>
+                <view class="text"><text>{{status[index]}}</text></view>
+              </view>
+              <!-- <view class="image">
+                <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/opening.png?sign=ac0246ae59179819a1fc2d18602f0eb0&t=1616484919"></image>
+              </view> -->
+            </view>
+            <view class="imageV">
+              <view class="image">
+                <image src="../../images/locking.png"></image>
+              </view>
+              <!-- <view class="image">
+                <image src="../../images/unlock.png"></image>
+              </view> -->
+            </view>
+            <!-- <view class="imageV">
+              <view class="image"><image src="../../images/safety.png"></image></view>
+              <view class="text"><text>{{protect}}</text></view>
+            </view> -->
+          </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view>
+    <text style="font-weight: bold;font-size: 40rpx;color: #fff;">离线设备：</text>
+    <view class="content">
+      <view class="p" id="{{[index]}}" wx:for="{{nane}}" wx:key="key">
+        <view class="pp"> -->
+          <!-- animation="{{slide_up[index]}}" -->
+          <!-- <view class="ppp"> -->
+            <!-- catchtap="imageUpload" -->
+            <!-- <view> -->
+              <!-- <image class="pppImage" src="cloud://weiduan-9gtmiw7oa0914f23.7765-weiduan-9gtmiw7oa0914f23-1304768469/{{equiment[index]}}.png"></image> -->
+            <!-- </view> -->
+              <!-- <view wx:else> wx:if="{{uuid[index] !== imageUuidChange}}"
+                <image class="pppImage" src="cloud://weiduan-9gtmiw7oa0914f23.7765-weiduan-9gtmiw7oa0914f23-1304768469/{{uuid[index]}}.png'"></image>
+              </view> -->
+            <!-- <text class="text1">{{uuid[index]}}\n</text> -->
+            <!-- <text wx:if="{{locking[index] === 1}}">（{{state1}}）\n</text>          
+            <text wx:else>（{{state2}}）\n</text> -->
+            <!-- <text class="text1">{{nane[index]}}\n</text> -->
+            <!-- <text>当月使用电量：{{}}W\n</text>
+            <text>实时电流：{{}}A\n</text>
+            <text>实时电压：{{}}V\n</text> -->
+          <!-- </view> -->
+          <!-- data-id="[{{locking[index],uuid[index]}}]" -->
+          <!-- <view class="imageView">
+            <view class="imageStatus">
+              <view class="image">
+                <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/colsing.png?sign=9eace0ff89d8411a7ddc0097711dfd71&t=1616484935"></image>
+              </view> -->
+              <!-- <view class="image">
+                <image src="https://7765-weiduan-9gtmiw7oa0914f23-1304768469.tcb.qcloud.la/opening.png?sign=ac0246ae59179819a1fc2d18602f0eb0&t=1616484919"></image>
+              </view> -->
+            <!-- </view>
+            <view class="imageV">
+              <view class="image">
+                <image src="../../images/locking.png"></image>
+              </view> -->
+              <!-- <view class="image">
+                <image src="../../images/unlock.png"></image>
+              </view> -->
+            <!-- </view> -->
+            <!-- <view class="imageV">
+              <view class="image"><image src="../../images/safety.png"></image></view>
+              <view class="text"><text>{{protect}}</text></view>
+            </view> -->
+          <!-- </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view style="height: 300rpx; background-color: #303030;"></view>
+
+  <view class="bottom">
+    <text style="font-size: 30rpx; font-weight: bold;color: #fff;">江苏三口井信息科技有限公司\n</text>
+    <text style="font-size: 20rpx;color: #fff;">Jiangsu Thinkdream Information Technology Corporation\n</text>
+    <text style="font-size: 20rpx; color: rgb(46, 61, 199);" bindtap="out">http://www.thinkdream.com.cn/</text>
+  </view>
+</view>
+

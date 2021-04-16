@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/controlWD/controlWD",
+    
+    "pages/details1/details1",
+    "pages/control2/control2",
+    "pages/sgin/sgin",
+    "pages/register/register",
+    "pages/uploadImage/uploadImage",
+    "pages/controlSZ/controlSZ",
+    "pages/control1/control1",
+    "pages/alarm/alarm",
+    "pages/contact/contact",
+    "pages/home1/home1",
+    "pages/binding/binding",
+    "pages/home/home",
+    "pages/timeOut/timeOut",
+    "pages/mine/mine",
+    "pages/details/details",
+    "pages/manage/manage",
+    "pages/control/control",
+    "pages/progress/progress",
+    "pages/dome/dome",
+    "pages/dateDo/dateDo",
+    "pages/dataNow/dataNow",
+    "pages/out/out",
+    "pages/dataZoom/dataZoom",
+    "pages/alarmMore/alarmMore",
+    "pages/data/data",
+    "pages/date/date",
+    "pages/sharemain/sharemain",
+     
+    "pages/code/code",
+    "pages/equipment/equipment",
+    
+    
+    "pages/dome1/dome1",
+    "pages/share/share",
+    
+    "pages/animate/animate",
+    "pages/indexs/indexs",
+    "pages/databaseGuide/databaseGuide"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#303040",
+    "navigationBarTitleText": "三口井电行家",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#303040",
+    "list": [{
+      "pagePath": "pages/controlWD/controlWD",
+      "text": "首页",
+      "iconPath":"images/shouye1.png",
+      "selectedIconPath":"images/shouye.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath":"images/my1.png",
+      "selectedIconPath":"images/my.png"
+    }]
+  }
+}

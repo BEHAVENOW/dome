@@ -1,0 +1,24 @@
+<view class="content">
+  <view class="header">
+    <text style="font-weight: 500; font-size: 60rpx;" >请输入6位验证码\n</text>
+    <text style="line-height: 60rpx; ">验证码已发送至8613***********</text>
+  </view>
+  <view class="section">
+    <view>
+      <text style="margin-left: 5%; line-height: 120rpx;">6位验证码</text>
+    </view>
+    <view >
+      <view style="width: 90%; height: 70rpx; display: flex;margin-left: 5%; "> 
+        <input type="text"  style="border-bottom: 1rpx solid rgb(175, 171, 171); " />
+        <input type="text"  style="margin-left: 5%; border-bottom: 1rpx solid rgb(175, 171, 171); " />
+        <input type="text"  style="margin-left: 5%; border-bottom: 1rpx solid rgb(175, 171, 171); " />
+        <input type="text"  style="margin-left: 5%; border-bottom: 1rpx solid rgb(175, 171, 171); " />
+        <input type="text"  style="margin-left: 5%; border-bottom: 1rpx solid rgb(175, 171, 171); " />
+        <input type="text"  style="margin-left: 5%; border-bottom: 1rpx solid rgb(175, 171, 171); " />
+      </view>
+      <view style="margin-top: 6%;">
+        <button style="color: #fff; background-color: #177; width: 90%;" bindtap="btn">登录</button>
+      </view>
+    </view>    
+  </view>
+</view>

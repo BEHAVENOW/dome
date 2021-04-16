@@ -1,0 +1,37 @@
+<view class="body">
+	<!-- <view class="navigate">
+        <text>请选择微断：</text>
+        <view class="search-bar">
+            <view class="condition" bindtap="showCondition">
+                <view class="select-condition">{{title}}</view>
+                <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+                <cover-view class="option-list" style="height: {{conditionVisible ? (uuid.length>5?300:uuid.length*60):0}}">
+                    <cover-view bindtap="onChnageCondition" class="list-item" wx:for="{{uuid}}" wx:key="index" wx:for-index="index" id="{{uuid[index]}}" >
+                        <cover-view class="title">{{uuid[index]}}</cover-view>
+                    </cover-view> 
+                </cover-view>
+            </view>
+        </view>
+    </view> -->
+    <!-- <view class="dateChange">
+        <view class="dateDay">
+            <button bindtap="dateDay">日</button>
+        </view>
+        <view class="dateMouth">
+            <button bindtap="dateMouth">月</button>
+        </view>
+    </view> -->
+    <view class="wrap">
+        <ec-canvas id="mychart-line1" canvas-id="mychart-line1" ec="{{ ac }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+    <view class="wrap">
+        <ec-canvas id="mychart-line2" canvas-id="mychart-line2" ec="{{ bc }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+    <view class="wrap">
+        <ec-canvas id="mychart-line3" canvas-id="mychart-line3" ec="{{ cc }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+    <view class="wrap">
+        <ec-canvas id="mychart-line4" canvas-id="mychart-line4" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+    <view style="height: 200rpx;"></view>
+</view>

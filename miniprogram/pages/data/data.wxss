@@ -1,0 +1,107 @@
+.body {
+  width: 100%;
+  color: #8F9FAD;
+  background-color: #303030;
+}
+/* 
+.wrap {
+  width: 100%;
+  height: 500rpx;
+} */
+.navigate {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.navigate text {
+  line-height: 50px;
+}
+
+/* 日期选择 */
+.dateChange {
+  display: flex;
+}
+.dateDay {
+  flex: 1;
+}
+.dateMouth {
+  flex: 1;
+}
+/* 日期选择 */
+
+/* search */
+.search-bar {
+  width: 40%;
+  background: #1E1F2A;
+  margin: auto 0;
+  margin-left: 10px;
+  margin-right: 10rpx;
+  box-sizing: border-box;
+  /* padding: 0 10rpx; */
+  display: flex;
+  align-items: center;
+}
+
+.search-bar .condition {
+  width: 100%;
+  height: 64rpx;
+  /* border-radius: 30rpx; */
+  background: #ffffff;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* padding: 0 20rpx; */
+  position: relative;
+}
+
+.search-bar .condition .option-list {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 60rpx;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  /* padding: 0rpx 20rpx; */
+  margin-top: 4rpx;
+  border-radius: 6rpx;
+}
+
+.option-list .list-item {
+  color: #3b3a3a;
+  font-size: 26rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar .condition .select-condition {
+  color: #333333;
+  font-size: 26rpx;
+  margin: auto;
+}
+
+.search-bar .condition .trigger {
+  width: 0;
+  height: 0;
+  border: 12rpx solid transparent;
+  border-top: 15rpx solid #c2c2c2;
+  position: relative;
+  top: 8rpx;
+  transform: rotate(0deg);
+  transform-origin: center 7rpx;
+  transition: transform 0.4s;
+}
+
+.search-bar .condition .trigger.reverse {
+  transform: rotate(180deg);
+  transform-origin: center 7rpx;
+  transition: transform 0.4s;
+}
+
+/* 下拉框结束 */

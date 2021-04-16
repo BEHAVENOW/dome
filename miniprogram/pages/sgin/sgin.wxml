@@ -1,0 +1,39 @@
+<view class="content">
+  <view class="header">
+    <text style="font-weight: 500; font-size: 60rpx;" >账号密码登录\n</text>
+    <text style="line-height: 60rpx;" bindtap="register">未注册的手机号请去<text style="color: blue;">注册</text></text>
+  </view>
+  <view class="section"> 
+    <view>
+      <text style="margin-left: 5%; line-height: 120rpx;">手机号码</text>
+    </view>
+    <view style="width: 90%; height: 60rpx; display: flex; border-bottom: 1rpx solid rgb(175, 171, 171); margin-left: 5%; "> 
+      <!-- <text style="width: 80rpx; height: 50rpx; border: 1rpx solid rgb(175, 171, 171); text-align: center; line-height: 50rpx;">+86</text> -->
+      <input type="text"  style="margin-left: 5%;width:600rpx;" bindinput="uname" placeholder="输入正确的手机号码" placeholder-style="color:#777;"/>
+    </view>
+    <view>
+      <text style="margin-left: 5%; line-height: 120rpx;">请输入密码</text>
+    </view>
+    <view style="display: flex; width: 90%; height: 60rpx; display: flex; border-bottom: 1rpx solid rgb(175, 171, 171); margin-left: 5%; "> 
+      <input type="{{type}}" style="width:600rpx;margin-left: 5%;" id="pwd" bindinput="pwd" placeholder="8到12位数字与字母的组合" placeholder-style="color:#777;"/>
+      <image src="{{url}}" style="width: 50rpx; height: 50rpx;position: absolute;right: 30rpx;" bindtap="display"></image>
+    </view>
+    <view >
+      
+      <view style="margin-top: 6%;">
+        <button style="color: #fff; background-color: #177; width: 90%;" bindtap="btn">登录</button>
+      </view>
+      <view>
+        <!-- <text style="color: #177; margin-left: 5%; line-height: 120rpx; ">使用账号密码登录</text> -->
+      </view>
+    </view>    
+  </view>
+  <view class="footer">
+    <!-- <text style="font-size: 20rpx;">注册/登录即代表您年满18岁，已认真阅读并同意接受Rook《服务条款》、《隐私政策》，并同意订阅微断特惠信息和政策更新，您可在设置中随时退订。</text> -->
+  </view>
+  <view class="bottom">
+    <text style="font-size: 30rpx; font-weight: bold;color: #fff;">江苏三口井信息科技有限公司\n</text>
+    <text style="font-size: 20rpx;color: #fff;">Jiangsu Thinkdream Information Technology Corporation\n</text>
+    <text style="font-size: 20rpx; color: rgb(46, 61, 199);" bindtap="out">http://www.thinkdream.com.cn/</text>
+  </view>
+</view>

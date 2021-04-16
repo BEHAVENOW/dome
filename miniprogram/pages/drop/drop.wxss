@@ -1,0 +1,72 @@
+/* search */
+.search-bar {
+  width: 150px;
+  height: 84rpx;
+  background: #fff;
+  /* border-top: 1rpx solid #f6f6f6; */
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  /* border: 1rpx solid red; */
+}
+
+.search-bar .condition {
+  width: 100%;
+  height: 64rpx;
+  /* border-radius: 30rpx; */
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.search-bar .condition .option-list {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 60rpx;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  padding: 0rpx 20rpx;
+  margin-top: 4rpx;
+  border-radius: 6rpx;
+}
+
+.option-list .list-item {
+  color: #BABABA;
+  font-size: 26rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar .condition .select-condition {
+  color: #BABABA;
+  font-size: 26rpx;
+}
+
+.search-bar .condition .trigger {
+  width: 0;
+  height: 0;
+  border: 12rpx solid transparent;
+  border-top: 15rpx solid #c2c2c2;
+  position: relative;
+  top: 8rpx;
+  transform: rotate(0deg);
+  transform-origin: center 7rpx;
+  transition: transform 0.4s;
+}
+
+.search-bar .condition .trigger.reverse {
+  transform: rotate(180deg);
+  transform-origin: center 7rpx;
+  transition: transform 0.4s;
+}
+
+/* 下拉框结束 */

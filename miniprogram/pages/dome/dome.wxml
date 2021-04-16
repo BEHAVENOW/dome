@@ -1,0 +1,56 @@
+<!--index.wxml-->
+
+<view class="content">
+  <view style="width: 100%; height: 40rpx; margin-bottom: 4%; margin-top: 2%;">
+    <image src="../../images/set.png" style="width: 40rpx; height: 40rpx; margin-left: 90%;" catchtap="spot"></image>
+  </view>
+  <!-- <view class="image">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical='{{vertical}}' circular='{{circular}}' indicator-active-color='blue' style="height: 100%;">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <navigator url="{{item.link}}" hover-class="navigator-hover">
+        <image src="{{item.url}}" mode="widthFix" class="slide-image swipimg"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  </view> -->
+  <view class="aa">
+    <view class="inside">
+      <view class="left"  bindtap="monitorGo">
+        <image class="imageView" src="{{imageUrl1}}"></image>
+        <view class="text"><text>实时监测</text></view>
+      </view>
+    </view>
+    <view class="inside">
+      <view class="right" bindtap="alarmGo">
+        <image class="imageView" src="{{imageUrl2}}"></image>
+        <view class="text"><text>用电告警</text></view>
+      </view>
+    </view>
+    <view class="inside">
+      <view class="left" bindtap="detailsGo">
+        <image class="imageView" src="{{imageUrl3}}"></image>
+        <view class="text"><text>用电查询</text></view>
+      </view>
+    </view>
+    <view class="inside">
+      <view class="right" bindtap="controlGo">
+        <image class="imageView" src="{{imageUrl4}}"></image>
+        <view class="text"><text>远程控制</text></view>
+      </view>
+    </view>
+    <!-- <view class="inside">
+      <view class="left" bindtap="settingGo">
+        <image class="imageView" src="{{imageUrl4}}"></image>
+        <view class="text"><text>参数设置</text></view>
+      </view>
+    </view>
+    <view class="inside">
+      <view class="right" bindtap="controlGo">
+        <image class="imageView" src="{{imageUrl4}}"></image>
+        <view class="text"><text>远程升级</text></view>
+      </view>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,7 @@
+.pppImage {
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 18%;
+  border: 1px solid black;
+}

@@ -1,0 +1,7 @@
+<view class="body">
+  <view class="listZJ" bindtap="list" wx:for="{{uuid}}" wx:key="key" id="{{uuid[index]}}">
+    <image class="c" src="../../images/my.png"></image>
+    <text class="b">{{uuid[index]}}</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view>
+</view>

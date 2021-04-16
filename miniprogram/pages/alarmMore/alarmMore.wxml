@@ -1,0 +1,18 @@
+<view class="body">
+  <!-- <view class="head">
+    <input type="text"/>
+    <button>加入设备</button>
+  </view> -->
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">事件</view>
+      <view class="th th1">状态</view>
+    </view>
+    <view>
+      <view wx:for="{{list}}" wx:key="key"class="list" >
+        <view class="td">{{list[index]}}</view>
+        <view class="td">{{listData[index]}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,90 @@
+<!-- <view class="body" style="display: flex; width: 100%; height: 100vh; background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=380055306,3671097127&fm=26&gp=0.jpg'); background-size: cover; z-index: -1;">
+</view> -->
+<view class="content">
+  <!-- <swiper current="{{currentData}}" class='swiper' duration="500" bindchange="bindchange">
+    <swiper-item> -->
+      <!-- <view class="setQ">
+        <button bindtap="modal" style="color: #fff;">设置预计用电量：{{setUseTrue}}</button>
+        <modal hidden="{{hiddenmodalput}}" title="请设置用电量" 
+          confirm-text="提交" cancel-text="取消" bindcancel="cancel" 
+          bindconfirm="confirm">
+          <input type='text' placeholder="请输入内容" bindinput="getinput" auto-focus/>
+        </modal>
+      </view>
+      <view class="progress">
+        <text style="color: #fff;">当月电量使用情况：</text>
+        <progress class="progressP" percent="{{percent}}" show-info="true" stroke-width="20" activeColor="#0E75FF" backgroundColor="#69B7FF" active="true" active-mode="backwards" border-radius="8"></progress>
+      </view> -->
+      <view class="OC">
+        <view class="body-view">
+          <text>当前锁定的状态：</text>
+          <text style="color: #fff;">{{status}}</text>
+          <text class="switch-view" style="border: 30rpx solid {{color}};"></text>
+          <!-- <text class="switch-view1" style="border: 30rpx solid #a0a0a0;"></text> -->
+          <!-- <switch checked="{{switch1Checked}}" bindchange="switch1Change" type='switch'/> -->
+        </view>
+        <view class="btnOC">
+          <button style="background-color: {{colorOpen}};" bindtap="btnOpen">合闸</button>
+          <button style="background-color: {{colorClose}};" bindtap="btnClose">分闸</button>
+        </view>
+      </view>
+      <view class="timeChoice">
+        <!-- 时间选择 -->
+        <view class="choice">
+          <view class="leftTime">
+            <text>起始时间: \n</text> 
+            <text>{{leftTime}}</text>
+          </view>
+          <view class="dateStart">
+            <picker class="picker" mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+              <text>起始时间:</text> 
+              <view class="dateChange">
+                {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} 
+              </view>
+            </picker>
+          </view>
+          <!-- <view class="dateEnd">
+            <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+              <text>终止时间:</text>
+              <view class="dateChange">
+                {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} 
+              </view>
+            </picker>
+          </view> -->
+        </view>
+        <!-- 时间选择over -->
+      </view>
+      <view class="bottom">
+        <view class='contentBottom'>
+          <swiper class="tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='6'>
+              <view class="right-item">
+                  <block wx:for="{{dataDate}}" wx:key="ksy">
+                      <swiper-item>
+                          <view class='content-item'>
+                              <text class='name'>{{dataDate[index]}}</text>
+                              <text class='event'>{{dataEvent[index]}}</text>
+                              <text class='character'>{{dataCharacter[index]}}</text>
+                          </view>
+                      </swiper-item>
+                  </block> 
+              </view>
+          </swiper>
+        </view>
+      </view>
+    <!-- </swiper-item> 
+  </swiper> -->
+  <!-- <view class="aa">
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #03D5A2;" bindtap="controlGo">
+        <image class="imageView" src="{{imageUrl4}}"></image>
+      </view>
+      <view class="text"><text>远程控制</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #FF6504;" bindtap="detailsGo">
+        <image class="imageView" src="{{imageUrl3}}"></image>    
+      </view>
+      <view class="text"><text>历史查询</text></view>
+    </view>
+  </view> -->
+</view>

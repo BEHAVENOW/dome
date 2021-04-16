@@ -1,0 +1,21 @@
+<view>
+    <input id="postalCode" bindchange="bindChange" placeholder="输入要分享的用户" auto-focus />
+    <button bindtap="btn">确认</button>
+</view>
+<view class="body">
+  <view class="table">
+    <button bindtap="obtain">展示用户</button>
+    <view class="tr bg-w">
+      <view class="th">成员</view>
+      <view class="th th1" style="border-left: 0;">加入时间</view>
+      <view class="th th1" bindtap="add" style="border-left: 0;">删除成员</view>
+    </view>
+    <view>  
+      <view wx:for="var index = 0" wx:if="{{index < length}}" class="list">
+        <view class="td">{{dataName[index]}}</view>
+        <view class="td" style="border-left: 0;">{{dataTime[index]}}</view>
+        <view class="td" bindtap="delete" id="{{id[index]}}" style="border-left: 0;">删除</view>
+      </view>
+    </view>
+  </view>
+</view>

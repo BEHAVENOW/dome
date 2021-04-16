@@ -1,0 +1,25 @@
+<!-- <view class="body">
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">设备名称</view>
+      <view class="th2" style="border-left: 0;">设备状态</view>
+      <view class="th" style="border-left: 0;">加入设备时间</view>
+      <view class="th2" style="border-left: 0;">管理设备</view>
+    </view>
+    <view>
+      <view wx:for="{{uuid}}" wx:key="key"class="list" >
+        <view class="td">{{name[index]}}</view>
+        <view class="td1" style="border-left: 0;">{{status[index]}}</view>
+        <view class="td" style="border-left: 0;">{{time[index]}}</view>
+        <view class="td1" style="border-left: 0;" bindtap="manage" id="{{uuid[index]}}">管理</view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<view class="body">
+  <view class="listZJ" bindtap="manage" wx:for="{{uuid}}" wx:key="key" id="{{uuid[index]}}">
+    <view class="a">{{name[index]}}</view>
+    <view class="b">{{status[index]}}</view>
+    <view class="c">{{time[index]}}</view>
+  </view>
+</view>

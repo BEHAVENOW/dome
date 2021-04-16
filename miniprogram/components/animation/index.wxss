@@ -1,0 +1,17 @@
+/* pyp/animation/animation1/index.wxss */
+.bg_view{
+  width:100%;
+  height:100vh;
+  background: #1E1F2A;
+}
+
+.bgimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/*  彩虹颜色背景
+background: linear-gradient(45deg, #343702 0%, #07e625 20%, #4f308a 30%, #2e5f6d 40%, #2e34b1 45%, #03ff2d 65%, #83096e 70%, #6628a0 80%, #b13e12 90%, #e27412 100%); 
+*/

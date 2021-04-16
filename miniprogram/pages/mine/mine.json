@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "p-animation1": "../../components/animation/index"
+  }
+}

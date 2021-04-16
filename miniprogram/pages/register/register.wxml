@@ -1,0 +1,42 @@
+<view class="content">
+  <view class="header">
+    <text style="font-weight: 500; font-size: 60rpx;" >注册账号密码\n</text>
+    <text style="line-height: 60rpx; ">使用未注册手机号</text>
+  </view>
+  <view class="section">
+    <view>
+      <text style="margin-left: 5%; line-height: 80rpx;">请输入手机号码</text>
+    </view>
+    <view >
+      <view style="width: 90%; height: 60rpx; display: flex; border-bottom: 1rpx solid rgb(175, 171, 171); margin-left: 5%; "> 
+        <input type="text"  style="margin-left: 5%;" bindinput="uname" placeholder="输入正确的手机号码" placeholder-style="color:#777;"/>
+      </view>
+    </view>  
+    <view>
+      <text style="margin-left: 5%; line-height: 80rpx;">请输入密码</text>
+    </view>
+    <view style="width: 90%; height: 60rpx; display: flex; border-bottom: 1rpx solid rgb(175, 171, 171); margin-left: 5%; "> 
+      <input type="{{type}}" style="width:600rpx;margin-left: 5%;" id="pwd" bindinput="pwd" placeholder="8到12位数字与字母的组合" placeholder-style="color:#777;"/>
+      <image src="{{url}}" style="width: 50rpx; height: 50rpx;position: absolute;right: 30rpx;" bindtap="display"></image>
+    </view>
+    <view>
+      <text style="margin-left: 5%; line-height: 80rpx;">请确认密码</text>
+    </view>
+    <view style="width: 90%; height: 60rpx; display: flex; border-bottom: 1rpx solid rgb(175, 171, 171); margin-left: 5%; "> 
+      <input type="{{type}}"  style="width:600rpx;margin-left: 5%;" bindinput="pwd1" placeholder="两次密码应完全一致" placeholder-style="color:#777;"/>
+      <image src="{{url}}" style="width: 50rpx; height: 50rpx;position: absolute;right: 30rpx;" bindtap="display"></image>
+    </view>
+    <view >
+      <view style="margin-top: 6%;">
+        <button style="color: #fff; background-color: #177; width: 90%;" bindtap="btn">注册</button>
+      </view>
+      <!-- <view style="display: flex;">
+        <text style="width: 35%; color: #177; margin-left: 5%; line-height: 120rpx; ">手机动态密码登录</text>
+        <text style="line-height: 120rpx; margin-left: 35%;">忘记密码？</text>
+      </view> -->
+    </view>    
+  </view>
+  <view class="footer">
+    <text style="font-size: 20rpx;">注册/登录即代表您年满18岁，已认真阅读并同意接受Rook《服务条款》、《隐私政策》，并同意订阅微断特惠信息和政策更新，您可在设置中随时退订。</text>
+  </view>
+</view>

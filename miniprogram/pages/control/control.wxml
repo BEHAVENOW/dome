@@ -1,0 +1,126 @@
+<view class="body">
+  <!-- <view style="width: 100%; height: 40rpx; margin-bottom: 4%; margin-top: 2%;">
+    <image src="../../images/set.png" style="width: 40rpx; height: 40rpx; margin-left: 90%;" catchtap="spot"></image>
+  </view> -->
+  <view class="head">
+    <view class="data">
+      <view class="dataData"><text>微断名称：\n</text></view>
+      <view class="dataData"><text>工作状态：\n</text></view>
+      <view class="dataData"><text>当月用电量:\n</text></view>
+      <!-- <view class="dataData"><text>\n</text></view>   -->
+    </view>
+    <!-- <view class="wrap">
+        <ec-canvas id="mychart-line1" canvas-id="mychart-line1" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas> -->
+    <!-- </view> -->
+  </view>
+  <!-- 下半部滑动块 -->
+  <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>用电量</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>发生异常</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>实时数据</view>
+  </view>
+
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <!-- 用电量部分 -->
+    <swiper-item><view class='swiper_con'>
+      <view class="content">
+        <scroll-view scroll-x class="scroll">
+          <view class="scroll-view">
+          <view class="scroll-view-item {{timeIndex == index ? 'active' : ''}}" wx:for="{{list}}" wx:key="key" wx:for-index="index" bindtap="timeChange" data-index='{{index}}'>{{item}}</view>
+          </view>
+        </scroll-view>
+        <view class="mychart">
+          <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+    </view></swiper-item> 
+    <!-- 异常部分 -->
+    <swiper-item><view class='swiper_con'>
+      <!-- <view class="content">
+        <scroll-view scroll-x class="scroll">
+          <view class="scroll-view">
+          <view class="scroll-view-item {{timeIndex == index ? 'active' : ''}}" wx:for="{{list1}}" wx:for-index="index" bindtap="timeChange" data-index='{{index}}'>{{item}}</view>
+          </view>
+        </scroll-view> -->
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">微断异常告警</view>
+            <view class="th">停电告警</view>
+            <view class="th ">功率过载故障</view>
+            <view class="th ">过压告警</view>
+            <view class="th ">低压告警</view>
+          </view>
+          <view class="list">
+            <list wx:for="{{listData1}}" wx:key="key" class="td">
+              <view>{{item}}</view>
+            </list>
+          </view>
+        </view>
+      <!-- </view> -->
+    </view></swiper-item>
+      <!-- 实时数据部分 -->
+    <swiper-item><view class='swiper_con'>
+      <view class="content">
+        <scroll-view scroll-x class="scroll">
+          <view class="scroll-view">
+          <view class="scroll-view-item {{timeIndex == index ? 'active' : ''}}" wx:for="{{list1}}" wx:key="key" wx:for-index="index" bindtap="timeChange" data-index='{{index}}'>{{item}}</view>
+          </view>
+        </scroll-view>
+        <view class="mychart">
+          <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+    </view></swiper-item>  
+  </swiper>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <view class="content">
+    <view class="list">
+      <text>微断id:</text>         
+      <text>{{key}}</text>
+    </view>
+    <view class="list">
+      <text>最新上线时间:</text>         
+      <text></text>
+    </view>
+  </view>
+  <view class="choice">
+    <text>当前开关状态：</text>
+    <switch checked="{{checked}}" bindchange="switchEvent" />
+  </view> -->
+<!-- </view>
+<view class="table">
+    <view class="tr bg-w">
+      <view class="th">操作内容</view>
+      <view class="th th1">操作时间</view>
+      <view class="th th1">操作人</view>
+    </view>
+    <view>
+      <view wx:for="{{listData}}" wx:key="key"class="list" >
+        <view class="td">{{item.name}}</view>
+        <view class="td">{{item.time}}</view>
+        <view class="td">{{item.type}}</view>
+      </view>
+    </view>
+  </view>
+</view> -->

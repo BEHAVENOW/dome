@@ -1,0 +1,21 @@
+<view class="body">
+  <view>
+    <input id="postalCode" bindchange="bindChange" placeholder="输入要分享的用户" auto-focus />
+    <button catchtap="btn" style="color: #fff;">确认</button>
+  </view>
+  <view class="table">
+    <button catchtap="obtain" style="color: #fff;">{{uuid}}分享成员</button>
+    <view class="tr bg-w">
+      <view class="th">成员</view>
+      <view class="th th1" style="border-left: 0;">分享时间</view>
+      <view class="th th1" bindtap="add" style="border-left: 0;">删除成员</view>
+    </view>
+    <view>  
+      <view wx:for="{{shareNumber}}" class="list" wx:key="key">
+        <view class="td">{{shareNumber[index]}}</view>
+        <view class="td" style="border-left: 0;">{{shareNumberTime[index]}}</view>
+        <view class="td" bindtap="delete" id="{{shareId[index]}}" style="border-left: 0;">删除</view>
+      </view>
+    </view>
+  </view>
+</view>

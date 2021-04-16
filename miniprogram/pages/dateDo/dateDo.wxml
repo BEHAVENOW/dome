@@ -1,0 +1,15 @@
+<view class="content">
+  <scroll-view scroll-x class="scroll">
+    <view class="scroll-view">
+     <view 
+     class="scroll-view-item {{timeIndex == index ? 'active' : ''}}" 
+     wx:for="{{list}}" 
+     wx:for-index="index" 
+     bindtap="timeChange" 
+     data-index='{{index}}'>{{item}}</view>
+    </view>
+  </scroll-view>
+  <view class="mychart">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>

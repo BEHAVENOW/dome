@@ -1,0 +1,216 @@
+<!--pages/alarm/alarm.wxml-->
+<view class="body">
+  <!-- <view class="navigate">
+    <text>请选择微断：</text>
+    <view class="search-bar">
+        <view class="condition" bindtap="showCondition">
+            <view class="select-condition">{{title}}</view>
+            <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+            <cover-view class="option-list" style="height: {{conditionVisible ? (uuid.length>5?300:uuid.length*60):0}}">
+                <cover-view bindtap="onChnageCondition" class="list-item" wx:for="{{uuid}}" wx:key="index" wx:for-index="index" id="{{uuid[index]}}" >
+                    <cover-view class="title">{{uuid[index]}}</cover-view>
+                </cover-view> 
+            </cover-view>
+        </view>
+    </view>
+  </view> -->
+  <view class="top" style="display: flex;margin-bottom: 2%;">
+    <text style="font-weight: bold;font-size: 40rpx;">当前状态：</text>
+    <button bindtap="bindMore">点击查看更多</button>
+  </view>
+  <view class="table"> 
+    <view class="tr bg-w">
+      <view class="th">微断异常告警</view>
+      <view class="th">停电告警</view>
+      <view class="th ">功率过载故障</view>
+      <view class="th ">过压告警</view>
+      <view class="th ">低压告警</view>
+    </view>
+    <view class="list">
+      <list wx:for="{{listData1}}" wx:key="key" class="td">
+        <view>{{item}}</view>
+      </list>
+    </view>
+  </view>
+  <!-- <view class="wrap">
+    <ec-canvas id="mychart-line" canvas-id="mychart-line" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+  </view>  -->
+  <!-- <view class="table"> 
+    <view class="tr bg-w">
+      <view class="th">微断异常告警</view>
+      <view class="th">停电告警</view>
+      <view class="th ">功率过载故障</view>
+      <view class="th ">过压告警</view>
+      <view class="th ">低压告警</view>
+    </view>
+    <view class="list">
+      <list wx:for="{{listData1}}" wx:key="key" class="td">
+        <view>{{item}}</view>
+      </list>
+    </view>
+  </view> -->
+
+  <view class="start">
+    <text style="font-weight: bold;font-size: 40rpx;margin-bottom: 30rpx;">微断控制：</text>
+    <view class="startButton" style="margin-top: 30rpx;">
+      <view><button>复位</button></view>
+      <view style="margin-bottom: 30rpx;"><button>漏电自检</button></view>
+    </view>
+  </view>
+  <view class='contentBottom'>
+    <text style="font-weight: bold;font-size: 40rpx;margin-top:30rpx;">近20条告警事件：</text>
+    <view class='content-item1'>
+      <text class='num'>序号</text>
+      <text class='name'>告警事件</text>
+      <text class="time">发生时间</text>
+      <text class='wawa'>状态</text>
+    </view>
+    <swiper class="tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='9'>
+        <view class="right-item">
+            <block wx:for="{{data}}" wx:key="ksy">
+                <swiper-item>
+                    <view class='content-item'>
+                        <text class='num'>{{index + 1}}.</text>
+                        <text class='name'>{{data[index]}}</text>
+                        <text class="time">{{dataTime[index]}}</text>
+                        <text class='wawa'>{{dataValue[index]}}</text>
+                    </view>
+                </swiper-item>
+            </block> 
+            
+        </view>
+    </swiper>
+  </view>
+  <!-- <view class="bottom">
+    <view class='contentBottom'>
+        <view class='BottomFirst'>
+          <view class="navigate">
+            <view class="search-bar">
+              <view class="condition" bindtap="showCondition">
+                  <view class="select-condition">{{title}}</view>
+                  <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+                  <cover-view class="option-list" style="height: {{conditionVisible ? (conditionList.length>5?300:conditionList.length*60):0}}">
+                      <cover-view bindtap="onChnageCondition" data-id="{{item.id}}" class="list-item" wx:for="{{conditionList}}" wx:key="index" wx:for-index="index" >
+                          <cover-view class="title">{{item.title}}</cover-view>
+                      </cover-view>
+                  </cover-view>
+              </view>
+          </view>
+          </view>
+        </view>
+        <view class="content">
+          <view class="choice">
+            <view class="leftTime">
+              <text>起始时间: \n</text> 
+              <text>{{leftTime}}</text>
+            </view>
+            <view class="dateStart">
+              <picker class="picker" mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+                <text>请选择起始时间:</text> 
+                <view class="dateChange">
+                  {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} 
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <swiper class="tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='4'>
+            <view class="right-item">
+                <block wx:for="{{dataDate}}" wx:key="ksy">
+                    <swiper-item>
+                        <view class='content-item'>
+                            <text class='name'>{{dataDate[index]}}</text>
+                            <text class='wawa'>{{dataPhV[index]}}V</text>
+                        </view>
+                    </swiper-item>
+                </block> 
+            </view>
+        </swiper>
+    </view>
+  </view> -->
+  <!-- 下半部滑动块 -->
+  <!-- <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>停电告警</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>过压告警</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>低压告警</view>
+    <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}'  data-current = "3" bindtap='checkCurrent'>异常告警</view>
+    <view class='tab  {{currentData == 4 ? "tabBorer" : ""}}'  data-current = "4" bindtap='checkCurrent'>过载故障</view>
+  </view>
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <swiper-item><view class='swiper_con'>
+      <view class="data">
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">发生时间</view>
+            <view class="th">异常事件</view>
+          </view>
+          <view class="list">
+            <list wx:for="{{listData}}" wx:key="key" class="td">
+              <view>{{item}}</view>
+            </list>
+          </view>
+        </view>
+      </view>
+    </view></swiper-item> 
+    <swiper-item><view class='swiper_con'>
+      <view class="data">
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">发生时间</view>
+            <view class="th">异常事件</view>
+          </view>
+          <view class="list">
+            <list wx:for="{{listData}}" wx:key="key" class="td">
+              <view>{{item}}</view>
+            </list>
+          </view>
+        </view>
+      </view>
+    </view></swiper-item>
+    <swiper-item><view class='swiper_con'>
+      <view class="data">
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">发生时间</view>
+            <view class="th">异常事件</view>
+          </view>
+          <view class="list">
+            <list wx:for="{{listData}}" wx:key="key" class="td">
+              <view>{{item}}</view>
+            </list>
+          </view>
+        </view>
+      </view>
+    </view></swiper-item>  
+    <swiper-item><view class='swiper_con'>
+      <view class="data">
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">发生时间</view>
+            <view class="th">异常事件</view>
+          </view>
+          <view class="list">
+            <list wx:for="{{listData}}" wx:key="key" class="td">
+              <view>{{item}}</view>
+            </list>
+          </view>
+        </view>
+      </view>
+    </view></swiper-item>  
+    <swiper-item><view class='swiper_con'>
+      <view class="data">
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">发生时间</view>
+            <view class="th">异常事件</view>
+          </view>
+          <view class="list">
+            <list wx:for="{{listData}}" wx:key="key" class="td">
+              <view>{{item}}</view>
+            </list>
+          </view>
+        </view>
+      </view>
+    </view></swiper-item>  
+  </swiper> -->
+</view>

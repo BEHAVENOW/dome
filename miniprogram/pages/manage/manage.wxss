@@ -1,0 +1,131 @@
+.body {
+  width: 100%;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background: #303030;
+}
+
+.head {
+  display: flex;
+  margin: 40rpx;
+}
+
+.head input {
+  width: 40%;
+  height: 50rpx;
+  background-color: #303030;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.head button {
+  display: flex;
+  width: 30%;
+  height: 50rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: #303030;
+}
+
+/* 表格开始 */
+.table {
+  border: 0px solid rgb(0, 0, 0);
+  margin-top: 20px;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+  flex: 1;
+  justify-content: center;
+  background: #303030;
+  font-size: 20rpx;
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+.td1 {
+  /* flex: 1; */
+  width: 150rpx;
+  justify-content: center;
+  background: #303030;
+  font-size: 20rpx;
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  flex: 1;
+  justify-content: center;
+  background: #303030;
+  font-size: 20rpx;
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: 0;
+}
+.th2 {
+  /* flex: 1; */
+  width: 150rpx;
+  justify-content: center;
+  background: #303030;
+  font-size: 20rpx;
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: 0;
+}
+.th-th1 {
+  border-left: 0;
+}
+/* 表格结束 */
+
+.listZJ {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  color: #000;
+  background-color: rgb(188, 197, 197);
+  margin-top: 20rpx;
+  line-height: 100rpx;
+}
+
+
+.c {
+  font-size: 25rpx;
+  width: 300rpx;
+}
+
+.b {
+  width: 150rpx;
+}
+
+
+.a {
+  margin-left: 20rpx;
+  width: 270rpx;
+}

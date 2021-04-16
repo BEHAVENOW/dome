@@ -1,0 +1,78 @@
+<view class="body">
+  <view class="navigate">
+    <text>数据密度：</text>
+    <view class="search-bar">
+        <view class="condition" bindtap="showCondition">
+            <view class="select-condition">{{choosedCondition.title}}</view>
+            <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+            <cover-view class="option-list" style="height: {{conditionVisible ? (conditionList.length>5?300:conditionList.length*60):0}}">
+                <cover-view bindtap="onChnageCondition" data-id="{{item.id}}" class="list-item" wx:for="{{conditionList}}" wx:key="index" wx:for-index="index" >
+                    <cover-view class="title">{{item.title}}</cover-view>
+                </cover-view>
+            </cover-view>a
+        </view>
+    </view>
+  </view>
+  <view>
+    <view class="choice">
+      <view class="dateStart">
+        <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray1}}">
+          <text>起始时间:</text> 
+          <view class="dateChange">
+            {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} 
+          </view>
+        </picker>
+      </view>
+      <view class="dateEnd">
+        <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+          <text>终止时间:</text>
+          <view class="dateChange">
+            {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} 
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="wrap">
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+  </view>
+  <!-- 下半部滑动块 -->
+  <!-- <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>周数据</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>月数据</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>年数据</view>
+  </view>
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <swiper-item><view class='swiper_con'>
+      <view class="wrap">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+    </view></swiper-item> 
+    <swiper-item><view class='swiper_con'>
+      <view class="wrap">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+    </view></swiper-item>
+    <swiper-item><view class='swiper_con'>
+      <view class="wrap">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+    </view></swiper-item>  
+  </swiper> -->
+  <!-- <view class="table">
+    <view class="tr bg-w">
+      <view class="th">总电能</view>
+      <view class="th">尖电能</view>
+      <view class="th ">峰电能</view>
+      <view class="th ">平电能</view>
+      <view class="th ">谷电能</view>
+    </view>
+    <view class="list">
+      <list wx:for="{{listData}}" wx:key="key" class="td">
+        <view>{{item}}</view>
+      </list>
+    </view>
+  </view> -->
+</view> 

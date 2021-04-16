@@ -1,0 +1,19 @@
+
+<!-- <view class="body" style="display: flex; width: 100%; height: 100vh; background: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=381205888,1176521966&fm=26&gp=0.jpg'); background-size: cover; z-index: -1;"> -->
+<view class="body" style="display: flex; width: 100%; height: 100vh; background: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1684716891,3115351368&fm=26&gp=0.jpg'); background-size: cover; z-index: -10;">
+  <!-- filter: blur(10rpx);  背景图虚化使用 -->
+  <!-- https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1778898311,3140873435&fm=26&gp=0.jpg -->
+</view>
+<view style="position: absolute;bottom: 0;width: 100%;height: 100vh;background: linear-gradient(rgb(255,255,255,0), rgb(175,200,210,0.6)); z-index: -1;background-size: cover;"></view>
+<view class="content">
+  <view class="words">
+    <text style="font-weight: 700; font-size: 80rpx;color:#303030;">三口井电行家\n</text>
+    <text class="textColor">为您的家保驾护航</text>
+  </view>
+  <view class="btn" bindtap="button">
+    <button bindtap="register">登录</button>
+  </view>
+  <view class="text" bindtap="login"> 
+    <text>已经有账号了？<text style="color: rgb(28, 145, 247); font-size: 35rpx;">注册</text></text>
+  </view>
+</view>

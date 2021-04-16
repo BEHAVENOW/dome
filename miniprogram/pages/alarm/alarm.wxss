@@ -1,0 +1,395 @@
+/* pages/alarm/alarm.wxss */
+.body {
+  width: 100%;
+  height: 100vh;
+  color: #73818F;
+  background: #303030;
+}
+
+.navigate {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.navigate text {
+  line-height: 50px;
+}
+
+.start {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 10rpx solid #fff;
+}
+
+.startButton {
+  display: flex;
+}
+
+.startButton view {
+  flex: 1;
+}
+
+.startButton button {
+  width: 80%;
+  color: rgb(0, 0, 0);
+  background-color: rgb(233, 225, 225);
+}
+
+.content {
+  width: 100%;
+  /* margin-top: 10px; */
+  /* border: 1px solid black; */
+}
+
+
+
+.data {
+  width: 100%;
+  margin-top: 10px;
+  /* border: 1px solid black; */
+}
+
+/* search */
+.search-bar {
+  width: 35%;
+  height: 84rpx;
+  background: #303030;
+  margin: auto 0;
+  margin-left: 5px;
+  margin-right: 10rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar .condition {
+  width: 100%;
+  height: 64rpx;
+  /* border-radius: 30rpx; */
+  background: #f5f2f2;
+  border-radius: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* padding: 0 20rpx; */
+  position: relative;
+}
+
+.search-bar .condition .option-list {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 60rpx;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  /* padding: 0rpx 20rpx; */
+  margin-top: 4rpx;
+  border-radius: 6rpx;
+}
+
+.option-list .list-item {
+  color: #3b3a3a;
+  font-size: 26rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar .condition .select-condition {
+  color: #333333;
+  font-size: 26rpx;
+}
+
+.search-bar .condition .trigger {
+  width: 0;
+  height: 0;
+  border: 12rpx solid transparent;
+  border-top: 15rpx solid #292727;
+  position: relative;
+  top: 8rpx;
+  transform: rotate(0deg);
+  transform-origin: center 7rpx;
+  transition: transform 0.4s;
+}
+
+.search-bar .condition .trigger.reverse {
+  transform: rotate(180deg);
+  transform-origin: center 7rpx;
+  transition: transform 0.4s;
+}
+
+/* 下拉框结束 */
+
+/* 图表开始 */
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.wrap {
+  width: 100%;
+  height: 500rpx;
+}
+
+.tab {
+  height: 50px;
+  display: flex;
+  line-height: 50px;
+}
+
+.tab .li {
+  width: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* 图表结束 */
+
+/* 时间选择 */
+.choice {
+  display: flex;
+  width: 100%;
+  /* height: 3%; */
+  margin-top: 10px;
+  line-height: 30px;
+  /* border: 1px solid black; */
+}
+
+.dateStart {
+  flex: 1;
+  text-align: center;
+  /* border-right: 1px solid #000; */
+}
+.leftTime {
+  color: #fff;
+  flex: 1;
+  text-align: center;
+}
+.dateEnd {
+  flex: 1;
+  text-align: center;
+}
+/* .picker {
+  color: #fff;
+  width: 400rpx;
+  margin: auto;
+  border: 1px solid rgb(184, 162, 162); */
+  /* display: flex;
+  justify-content: space-between; */
+/* } */
+/* 时间选择 */
+
+/* 滑动块部分 */
+.tab {
+  width: 20%;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+}
+
+.topTabSwiper {
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  zoom: 1;
+  margin-top: 5%;
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer {
+  border-bottom: 1px solid rgb(77, 172, 209);
+  color: rgb(77, 172, 209);
+}
+
+.swiper {
+  width: 100%;
+  height: 600rpx;
+}
+
+.swiper_con {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20rpx 0;
+}
+
+/* 滑块部分 */
+
+
+/* bottom */
+.bottom {
+  width: 100%;
+  height: 50vh;
+}
+
+/* 底部滚动列表  */
+.contentBottom {
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #303030;
+}
+
+.BottomFirst {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #663a83; */
+  box-sizing: border-box;
+  margin: auto;
+}
+
+/* .BottomFirst text {
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #663a83;
+  line-height: 40rpx;
+  border-right: 1px solid #663a83;
+  box-sizing: border-box;
+}
+.BottomFirst text:nth-child(1){
+  border: none;
+} */
+.tab-right {
+  width: 90%;
+  margin: 20rpx auto;
+  height: 905rpx;
+}
+
+.right-item {
+  padding: 0 20rpx;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-item {
+  height: 100rpx;
+  border-bottom: 1px solid #ede1d4;
+  width: 95%;
+}
+
+.content-item1 {
+  height: 100rpx;
+  width: 85%;
+  margin: auto;
+}
+
+.avater {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 100rpx;
+  margin-top: 25rpx;
+  float: left;
+}
+
+.num {
+  /* width: 50rpx; */
+  font-size: 26rpx;
+  float: left;
+  line-height: 100rpx;
+  color: #ffffff;
+}
+
+.name {
+  font-size: 26rpx;
+  float: left;
+  /* margin-left: 20rpx; */
+  line-height: 100rpx;
+  color: #ffffff;
+  margin-left: 20rpx;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+.time {
+  font-size: 26rpx;
+  float: center;
+  line-height: 100rpx;
+  color: #ffffff;
+}
+.wawa {
+  font-size: 26rpx;
+  float: right;
+  line-height: 100rpx;
+  color: #ffffff;
+}
+
+/* bottom */
+
+.top {
+  margin-top: 20rpx;
+}
+.top button {
+  line-height: 50rpx;
+  color: #fff;
+  position: absolute;
+  right: 50rpx;
+}
+
+/* 表格开始 */
+.table {
+  /* margin-top: 50rpx; */
+  border: 0px solid #303030;
+  margin-bottom: 20rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.td {
+  flex: 1;
+  justify-content: center;
+  background-color: #303030;
+  font-size: 20rpx;
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+.bg-w{
+  background: #303030;
+}
+.bg-g{
+  background-color: #303030;
+}
+.th {
+  flex: 1;
+  justify-content: center;
+  background-color: #303030;
+  font-size: 20rpx;
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: 0;
+}
+/* 表格结束 */

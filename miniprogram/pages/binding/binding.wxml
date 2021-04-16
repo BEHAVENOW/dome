@@ -1,0 +1,16 @@
+<view class='form-list'>
+  <!-- <view class="listZJ" bindtap='scanCode'>
+    <image class="c" src="../../images/my.png"></image>
+    <text class="b">扫一扫</text>
+    <image class="a" src="../../images/arrow.png"></image>
+  </view> -->
+  <view class="sao" bindtap='scanCode'>
+    <image src="../../images/sao.png"></image>
+  </view>
+  <view style="height: 200rpx;"></view>
+  <!-- <text>{{scanCodeMsg}}</text> -->
+  <text style="color: #fff;margin-left: 60rpx;">手动输入微断ID:</text>
+  <view style="height: 40rpx;"></view>
+  <input type="text" id="uuid"  confirm-type="search" placeholder="输入uuid" placeholder-style="color:#a0a0a0;" style="box-shadow: 0 0 6px #e0e0e0;width: 500rpx; height: 70rpx;margin: auto;color:#fff;" bindinput="input"/>
+  <button bindtap="binding" style="color: #fff;">确认</button>
+</view>

@@ -1,0 +1,64 @@
+<!-- <view class="body" style="display: flex; width: 100%; height: 100vh; background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=380055306,3671097127&fm=26&gp=0.jpg'); background-size: cover; z-index: -1;">
+</view> -->
+<view class="content">
+  <view style="width: 100%; height: 40rpx; margin-bottom: 4%; top: 20rpx;position: absolute;">
+    <image src="../../images/set.png" style="width: 40rpx; height: 40rpx; margin-left: 90%;" catchtap="spot"></image>
+  </view>
+  <view class="head">
+    <view class="headBtn">
+      <button bindtap="dayBtn">日</button>
+      <button bindtap="mouthBtn">月</button>
+    </view>
+    <view class="wrap">
+        <ec-canvas id="mychart-line1" canvas-id="mychart-line1" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+  </view>
+  <!-- <view>
+    <view class="btnOC">
+      <button style="background-color: {{colorOpen}};" bindtap="btnOpen">合闸</button>
+      <button style="background-color: {{colorClose}};" bindtap="btnClose">分闸</button>
+    </view>
+    <view class="body-view">
+      <text>当前锁定的状态：</text>
+      <switch class='switch-view' checked="{{switch1Checked}}" bindchange="switch1Change" type='switch'/>
+    </view>
+  </view> -->
+  <!-- <view class="setQ">
+    <button bindtap="modal" style="color: #fff;">设置预计用电量：{{setUseTrue}}</button>
+    <modal hidden="{{hiddenmodalput}}" title="请设置用电量" 
+      confirm-text="提交" cancel-text="取消" bindcancel="cancel" 
+      bindconfirm="confirm">
+    <input type='text' placeholder="请输入内容" bindinput="getinput" auto-focus/>
+  </modal>
+  </view>
+  <view class="progress">
+    <text style="color: #fff;">当月电量使用情况：</text>
+    <progress class="progressP" percent="{{percent}}" show-info="true" stroke-width="20" activeColor="#0E75FF" backgroundColor="#69B7FF" active="true" active-mode="backwards" border-radius="8"></progress>
+  </view> -->
+  <view class="aa">
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #91F80E;" catchtap="monitorGo">
+        <image class="imageView" src="{{imageUrl1}}"></image>
+      </view>
+      <view class="text"><text>实时监测</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #FF6504;" bindtap="alarmGo">
+        <image class="imageView" src="{{imageUrl2}}"></image>
+      </view>
+      <view class="text"><text>用电告警</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #01D2FB;" bindtap="detailsGo">
+        <image class="imageView" src="{{imageUrl3}}"></image>    
+      </view>
+      <view class="text"><text>用电查询</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #03D5A2;" bindtap="controlGo">
+        <image class="imageView" src="{{imageUrl4}}"></image>
+      </view>
+      <view class="text"><text>远程控制</text></view>
+    </view>
+  </view>
+</view>

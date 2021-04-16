@@ -1,0 +1,46 @@
+<view class="content">
+  <view style="width: 100%; height: 40rpx; margin-bottom: 4%; top: 20rpx;position: absolute;">
+    <image src="../../images/set.png" style="width: 40rpx; height: 40rpx; margin-left: 90%;" catchtap="spot"></image>
+  </view>
+  <view class="center">
+    <view class="leftContent">
+      <image src="{{imageUrl}}"></image>
+    </view>
+    <view class="rightContent">
+      <text>分闸次数：{{sce_cnt}}次\n</text>
+      <text>合闸次数：{{soe_cnt}}次\n</text>
+      <text>实时电流：{{pha_adc}}A\n</text>
+      <text>实时电压：{{vdc}}V\n</text>
+      <text>上月用电量：{{wh_l}}KW-h\n</text>
+      <text>本月用电量：{{wh_c}}KW-h\n</text>
+      <!-- <text>合位：0{{}}\n</text>
+      <text>分位：1{{}}\n</text> -->
+    </view>
+  </view>
+  <view class="aa">
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #91F80E;" catchtap="monitorGo">
+        <image class="imageView" src="{{imageUrl1}}"></image>
+      </view>
+      <view class="text"><text>实时监测</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #FF6504;" bindtap="alarmGo">
+        <image class="imageView" src="{{imageUrl2}}"></image>
+      </view>
+      <view class="text"><text>用电告警</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #01D2FB;" bindtap="detailsGo">
+        <image class="imageView" src="{{imageUrl3}}"></image>    
+      </view>
+      <view class="text"><text>用电查询</text></view>
+    </view>
+    <view class="inside">
+      <view class="image" style="border: 5rpx solid #03D5A2;" bindtap="controlGo">
+        <image class="imageView" src="{{imageUrl4}}"></image>
+      </view>
+      <view class="text"><text>远程控制</text></view>
+    </view>
+  </view>
+</view>
